@@ -1,0 +1,15 @@
+Program do ściągania i odpowiedniego przemapowania GeoSonów na obiekty.
+
+Działające dla miast: Warszawa, Sulejówek, Piaseczno, Legionowo, Łomianki, Ząbki
+
+Przykładowe zapytania:
+http://localhost:8080/search?city=Ząbki
+
+http://localhost:8080/search?city=Ząbki,Warsaw,Legionowo,Piaseczno
+
+http://localhost:8080/search?city=Legionowo&city=Łomianki
+
+Wygenerowanego JSONa można wkleić w http://geojson.io w celu sprawdzenia użyteczności programu
+
+Wymagania: Java 11, Maven
+

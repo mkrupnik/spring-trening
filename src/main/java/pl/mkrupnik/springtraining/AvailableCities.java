@@ -12,7 +12,7 @@ class AvailableCities {
 
     AvailableCities() {
         cityMap = new HashMap<>();
-        cityMap.put("Warsaw", 336074);
+        cityMap.put("Warszawa", 336074);
         cityMap.put("Sulejówek", 2910917);
         cityMap.put("Ząbki", 2910919);
         cityMap.put("Legionowo", 3014990);

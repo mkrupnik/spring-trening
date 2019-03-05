@@ -18,7 +18,6 @@ class AvailableCities {
         cityMap.put("Legionowo", 3014990);
         cityMap.put("Łomianki", 336312);
         cityMap.put("Piaseczno", 336134);
-
     }
 
     int getCityID(String city) {

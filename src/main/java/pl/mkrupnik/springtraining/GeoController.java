@@ -11,9 +11,12 @@ public class GeoController {
     @Autowired
     private AvailableCities availableCities;
 
+    @Autowired
+    private GeoConsummer geoConsummer;
+
     @RequestMapping("/search")
     public String geoController(@RequestParam(value="city") String name) {
         int id = availableCities.getCityID(name);
-        return GeoConsummer.getGJSON(id);
+        return geoConsummer.getGJSON(id);
     }
 }

@@ -1,4 +1,4 @@
-package pl.mkrupnik.springtraining.GeoObjects;
+package pl.mkrupnik.springtraining.geoobjects;
 
         import java.util.List;
         import com.fasterxml.jackson.annotation.JsonInclude;

@@ -1,4 +1,4 @@
-package pl.mkrupnik.springtraining.Controllers;
+package pl.mkrupnik.springtraining.controllers;
 
 import org.springframework.stereotype.Component;
 

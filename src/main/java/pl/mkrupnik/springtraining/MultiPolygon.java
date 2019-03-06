@@ -15,6 +15,6 @@ public class MultiPolygon {
     @JsonProperty("type")
     public String type;
     @JsonProperty("coordinates")
-    public List<List<List<List<Double>>>> coordinates = null;
+    public List<List<List<List<String>>>> coordinates = null;
 
 }

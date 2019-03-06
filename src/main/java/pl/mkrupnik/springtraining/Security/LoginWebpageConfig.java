@@ -1,4 +1,4 @@
-package pl.mkrupnik.springtraining;
+package pl.mkrupnik.springtraining.Security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

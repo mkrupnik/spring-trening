@@ -1,8 +1,9 @@
-package pl.mkrupnik.springtraining;
+package pl.mkrupnik.springtraining.Services;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import pl.mkrupnik.springtraining.GeoObjects.GeometryCollection;
 
 @Service
 public class GeoConsummer {
@@ -16,5 +17,10 @@ public class GeoConsummer {
     public String getGJSON(int id) {
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject(String.format(urlPath, id), String.class);
+    }
+
+    public GeometryCollection getColGJSON(int id) {
+        RestTemplate restTemplate = new RestTemplate();
+        return restTemplate.getForObject(String.format(urlPath, id), GeometryCollection.class);
     }
 }

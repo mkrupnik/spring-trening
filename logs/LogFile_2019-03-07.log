@@ -93,3 +93,88 @@
 2019-03-07 12:21:40,695 INFO  [http-nio-8080-exec-1] DispatcherServlet: Initializing Servlet 'dispatcherServlet'
 2019-03-07 12:21:40,702 INFO  [http-nio-8080-exec-1] DispatcherServlet: Completed initialization in 7 ms
 2019-03-07 12:21:46,722 INFO  [http-nio-8080-exec-5] GeoController: user2 requested: Ząbki, Legionowo, 
+2019-03-07 14:11:32,826 INFO  [main] SpringtrainingApplicationTests: Starting SpringtrainingApplicationTests on EPPLKRAW0551 with PID 3820 (started by Marcin_Krupnik in C:\Users\Marcin_Krupnik\IdeaProjects\spring-training)
+2019-03-07 14:11:32,826 INFO  [main] SpringtrainingApplicationTests: No active profile set, falling back to default profiles: default
+2019-03-07 14:11:33,913 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 14:11:34,098 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 14:11:34,167 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 14:11:34,236 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 14:11:34,452 INFO  [main] DefaultSecurityFilterChain: Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27755487, org.springframework.security.web.context.SecurityContextPersistenceFilter@a50d709, org.springframework.security.web.header.HeaderWriterFilter@25673087, org.springframework.security.web.csrf.CsrfFilter@4601203a, org.springframework.security.web.authentication.logout.LogoutFilter@574b7f4a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@503df2d0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65f651eb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17dd671f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f0cab0a, org.springframework.security.web.session.SessionManagementFilter@348ad293, org.springframework.security.web.access.ExceptionTranslationFilter@d7109be, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6732726]
+2019-03-07 14:11:34,870 INFO  [main] ThreadPoolTaskExecutor: Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-07 14:11:35,196 INFO  [main] SpringtrainingApplicationTests: Started SpringtrainingApplicationTests in 2.749 seconds (JVM running for 3.472)
+2019-03-07 14:11:35,497 INFO  [Thread-1] ThreadPoolTaskExecutor: Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-07 14:12:25,165 INFO  [main] SpringtrainingApplication: Starting SpringtrainingApplication on EPPLKRAW0551 with PID 4804 (C:\Users\Marcin_Krupnik\IdeaProjects\spring-training\target\classes started by Marcin_Krupnik in C:\Users\Marcin_Krupnik\IdeaProjects\spring-training)
+2019-03-07 14:12:25,165 INFO  [main] SpringtrainingApplication: No active profile set, falling back to default profiles: default
+2019-03-07 14:12:26,506 INFO  [main] TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2019-03-07 14:12:26,522 INFO  [main] Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-07 14:12:26,538 INFO  [main] StandardService: Starting service [Tomcat]
+2019-03-07 14:12:26,538 INFO  [main] StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-07 14:12:26,553 INFO  [main] AprLifecycleListener: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-11.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk-11.0.2\bin;C:\Program Files\apache-maven-3.6.0\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program FIles\Gradle\gradle-5.2.1\bin;C:\Users\Marcin_Krupnik\AppData\Local\Microsoft\WindowsApps;;.]
+2019-03-07 14:12:26,669 INFO  [main] [/]: Initializing Spring embedded WebApplicationContext
+2019-03-07 14:12:26,669 INFO  [main] ContextLoader: Root WebApplicationContext: initialization completed in 1466 ms
+2019-03-07 14:12:26,854 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 14:12:26,939 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 14:12:27,020 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 14:12:27,091 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 14:12:27,220 INFO  [main] DefaultSecurityFilterChain: Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28757abd, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f9fc8bd, org.springframework.security.web.header.HeaderWriterFilter@30b975ad, org.springframework.security.web.csrf.CsrfFilter@45e9b12d, org.springframework.security.web.authentication.logout.LogoutFilter@97a145b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@59a79443, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e7b65d7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77c10a5f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@21a02556, org.springframework.security.web.session.SessionManagementFilter@2a334bac, org.springframework.security.web.access.ExceptionTranslationFilter@37ad042b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@443faa85]
+2019-03-07 14:12:27,319 INFO  [main] ThreadPoolTaskExecutor: Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-07 14:12:27,503 INFO  [main] Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2019-03-07 14:12:27,519 INFO  [main] TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-07 14:12:27,535 INFO  [main] SpringtrainingApplication: Started SpringtrainingApplication in 2.855 seconds (JVM running for 3.23)
+2019-03-07 14:12:27,535 INFO  [main] SpringtrainingApplication: Zaczynamy! Wystartowało!
+2019-03-07 14:48:14,892 INFO  [http-nio-8080-exec-1] [/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-07 14:48:14,892 INFO  [http-nio-8080-exec-1] DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2019-03-07 14:48:14,908 INFO  [http-nio-8080-exec-1] DispatcherServlet: Completed initialization in 16 ms
+2019-03-07 14:48:21,831 INFO  [http-nio-8080-exec-5] GeoController: user4 requested: Ząbki, Legionowo, 
+2019-03-07 14:57:43,532 INFO  [http-nio-8080-exec-5] GeoController: user4 requested: Ząbki, Legionowo, 
+2019-03-07 14:57:48,647 INFO  [http-nio-8080-exec-6] GeoController: user4 requested: Ząbki, 
+2019-03-07 15:01:19,261 INFO  [http-nio-8080-exec-7] GeoController: user4 requested: Ząbki, 
+2019-03-07 15:16:39,394 INFO  [main] SpringtrainingApplication: Starting SpringtrainingApplication on EPPLKRAW0551 with PID 6328 (C:\Users\Marcin_Krupnik\IdeaProjects\spring-training\target\classes started by Marcin_Krupnik in C:\Users\Marcin_Krupnik\IdeaProjects\spring-training)
+2019-03-07 15:16:39,394 INFO  [main] SpringtrainingApplication: No active profile set, falling back to default profiles: default
+2019-03-07 15:16:40,907 INFO  [main] TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2019-03-07 15:16:40,922 INFO  [main] Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-07 15:16:40,938 INFO  [main] StandardService: Starting service [Tomcat]
+2019-03-07 15:16:40,938 INFO  [main] StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-07 15:16:40,954 INFO  [main] AprLifecycleListener: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-11.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk-11.0.2\bin;C:\Program Files\apache-maven-3.6.0\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program FIles\Gradle\gradle-5.2.1\bin;C:\Users\Marcin_Krupnik\AppData\Local\Microsoft\WindowsApps;;.]
+2019-03-07 15:16:41,054 INFO  [main] [/]: Initializing Spring embedded WebApplicationContext
+2019-03-07 15:16:41,054 INFO  [main] ContextLoader: Root WebApplicationContext: initialization completed in 1591 ms
+2019-03-07 15:16:41,239 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 15:16:41,339 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 15:16:41,414 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 15:16:41,485 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 15:16:41,624 INFO  [main] DefaultSecurityFilterChain: Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@cb39552, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ddb3ae8, org.springframework.security.web.header.HeaderWriterFilter@1d408060, org.springframework.security.web.csrf.CsrfFilter@177c41d7, org.springframework.security.web.authentication.logout.LogoutFilter@48eb001a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7c52fc81, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@341b13a8, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1f3b992, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c91530d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67507df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a53f215, org.springframework.security.web.session.SessionManagementFilter@17ba57f0, org.springframework.security.web.access.ExceptionTranslationFilter@3119cf6f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3f018494]
+2019-03-07 15:16:41,722 INFO  [main] ThreadPoolTaskExecutor: Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-07 15:16:41,922 INFO  [main] Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2019-03-07 15:16:41,937 INFO  [main] TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-07 15:16:41,953 INFO  [main] SpringtrainingApplication: Started SpringtrainingApplication in 3.022 seconds (JVM running for 3.457)
+2019-03-07 15:16:41,953 INFO  [main] SpringtrainingApplication: Zaczynamy! Wystartowało!
+2019-03-07 15:16:44,275 INFO  [http-nio-8080-exec-1] [/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-07 15:16:44,275 INFO  [http-nio-8080-exec-1] DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2019-03-07 15:16:44,280 INFO  [http-nio-8080-exec-1] DispatcherServlet: Completed initialization in 5 ms
+2019-03-07 15:24:27,365 INFO  [main] SpringtrainingApplication: Starting SpringtrainingApplication on EPPLKRAW0551 with PID 5904 (C:\Users\Marcin_Krupnik\IdeaProjects\spring-training\target\classes started by Marcin_Krupnik in C:\Users\Marcin_Krupnik\IdeaProjects\spring-training)
+2019-03-07 15:24:27,365 INFO  [main] SpringtrainingApplication: No active profile set, falling back to default profiles: default
+2019-03-07 15:24:28,769 INFO  [main] TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2019-03-07 15:24:28,784 INFO  [main] Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-07 15:24:28,800 INFO  [main] StandardService: Starting service [Tomcat]
+2019-03-07 15:24:28,800 INFO  [main] StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-07 15:24:28,815 INFO  [main] AprLifecycleListener: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-11.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk-11.0.2\bin;C:\Program Files\apache-maven-3.6.0\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program FIles\Gradle\gradle-5.2.1\bin;C:\Users\Marcin_Krupnik\AppData\Local\Microsoft\WindowsApps;;.]
+2019-03-07 15:24:28,931 INFO  [main] [/]: Initializing Spring embedded WebApplicationContext
+2019-03-07 15:24:28,931 INFO  [main] ContextLoader: Root WebApplicationContext: initialization completed in 1519 ms
+2019-03-07 15:24:29,127 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 15:24:29,227 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 15:24:29,298 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 15:24:29,368 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-07 15:24:29,500 INFO  [main] DefaultSecurityFilterChain: Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36baa049, org.springframework.security.web.context.SecurityContextPersistenceFilter@97a145b, org.springframework.security.web.header.HeaderWriterFilter@1a500561, org.springframework.security.web.csrf.CsrfFilter@656f62dc, org.springframework.security.web.authentication.logout.LogoutFilter@51a18b21, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@27329d2a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@157ec23b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@619f2afc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41184371, org.springframework.security.web.session.SessionManagementFilter@633fd91, org.springframework.security.web.access.ExceptionTranslationFilter@3c854752, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@138aa3cc]
+2019-03-07 15:24:29,672 INFO  [main] ThreadPoolTaskExecutor: Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-07 15:24:29,880 INFO  [main] Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2019-03-07 15:24:29,911 INFO  [main] TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-07 15:24:29,911 INFO  [main] SpringtrainingApplication: Started SpringtrainingApplication in 3.047 seconds (JVM running for 3.463)
+2019-03-07 15:24:29,911 INFO  [main] SpringtrainingApplication: Zaczynamy! Wystartowało!
+2019-03-07 15:24:32,098 INFO  [http-nio-8080-exec-2] [/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-07 15:24:32,098 INFO  [http-nio-8080-exec-2] DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2019-03-07 15:24:32,103 INFO  [http-nio-8080-exec-2] DispatcherServlet: Completed initialization in 5 ms
+2019-03-07 15:24:32,803 INFO  [http-nio-8080-exec-2] GeoController: user requested: Warszawa, 
+2019-03-07 15:24:38,359 INFO  [http-nio-8080-exec-3] GeoController: user requested: Warszawa, 
+2019-03-07 15:24:44,349 INFO  [http-nio-8080-exec-4] GeoController: user requested: Warszawa, 
+2019-03-07 15:24:48,374 INFO  [http-nio-8080-exec-5] GeoController: user requested: Warszawa, 
+2019-03-07 15:24:51,713 INFO  [http-nio-8080-exec-6] GeoController: user requested: Warszawa, 

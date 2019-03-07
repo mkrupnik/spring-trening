@@ -1,4 +1,4 @@
-package pl.mkrupnik.springtraining.geoobjects;
+package pl.mkrupnik.springtraining.geoobject;
 
 import java.util.ArrayList;
 import java.util.List;

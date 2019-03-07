@@ -1,12 +1,12 @@
-package pl.mkrupnik.springtraining.controllers;
+package pl.mkrupnik.springtraining.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import pl.mkrupnik.springtraining.services.GeoConsummer;
-import pl.mkrupnik.springtraining.geoobjects.GeometryCollection;
+import pl.mkrupnik.springtraining.service.GeoConsummer;
+import pl.mkrupnik.springtraining.geoobject.GeometryCollection;
 
 import java.io.IOException;
 import java.util.List;

@@ -1,9 +1,9 @@
-package pl.mkrupnik.springtraining.services;
+package pl.mkrupnik.springtraining.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import pl.mkrupnik.springtraining.geoobjects.GeometryCollection;
+import pl.mkrupnik.springtraining.geoobject.GeometryCollection;
 
 @Service
 public class GeoConsummer {

@@ -60,6 +60,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         .roles("USER")
                         .build();
 
-        return new InMemoryUserDetailsManager(user,user2,user3,user4);
+        return new InMemoryUserDetailsManager(user, user2, user3, user4);
     }
 }

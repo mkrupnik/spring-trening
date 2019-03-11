@@ -10,9 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Slf4j
 public class SpringtrainingApplication {
 
-	public static void main(String[] args) throws Throwable{
-		SpringApplication.run(SpringtrainingApplication.class, args);
-		log.info("Let's roll!");
-	}
+    public static void main(String[] args) throws Throwable {
+        SpringApplication.run(SpringtrainingApplication.class, args);
+        log.info("Let's roll!");
+    }
 
 }

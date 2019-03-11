@@ -1330,3 +1330,14 @@ com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'None': was ex
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-03-11 15:34:21,796 INFO  [http-nio-8080-exec-4] GeoController: User user3 requested GeoJSON for cities: Ząbki, Skawina
+2019-03-11 15:35:17,026 INFO  [main] SpringtrainingApplicationTests: Starting SpringtrainingApplicationTests on EPPLKRAW0551 with PID 14692 (started by Marcin_Krupnik in C:\Users\Marcin_Krupnik\IdeaProjects\spring-training)
+2019-03-11 15:35:17,026 INFO  [main] SpringtrainingApplicationTests: No active profile set, falling back to default profiles: default
+2019-03-11 15:35:18,150 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-11 15:35:18,329 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-11 15:35:18,398 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-11 15:35:18,467 WARN  [main] User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2019-03-11 15:35:18,683 INFO  [main] DefaultSecurityFilterChain: Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79a7bfbc, org.springframework.security.web.context.SecurityContextPersistenceFilter@20d87335, org.springframework.security.web.header.HeaderWriterFilter@358ab600, org.springframework.security.web.csrf.CsrfFilter@329bad59, org.springframework.security.web.authentication.logout.LogoutFilter@f5b6e78, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@32b0876c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3bd6ba24, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c05ff9d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77f68df, org.springframework.security.web.session.SessionManagementFilter@43f9dd56, org.springframework.security.web.access.ExceptionTranslationFilter@17dd671f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e43ddd6]
+2019-03-11 15:35:19,083 INFO  [main] ThreadPoolTaskExecutor: Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-11 15:35:19,431 INFO  [main] SpringtrainingApplicationTests: Started SpringtrainingApplicationTests in 2.768 seconds (JVM running for 3.495)
+2019-03-11 15:35:19,732 INFO  [Thread-1] ThreadPoolTaskExecutor: Shutting down ExecutorService 'applicationTaskExecutor'

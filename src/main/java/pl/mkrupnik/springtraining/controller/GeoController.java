@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import pl.mkrupnik.springtraining.service.CityBoundariesService;
 import pl.mkrupnik.springtraining.model.GeometryCollection;
+import pl.mkrupnik.springtraining.service.CityBoundariesService;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
@@ -20,8 +20,8 @@ public class GeoController {
     private CityBoundariesService cityBoundariesService;
 
     @RequestMapping("/search")
-    public GeometryCollection geoController(HttpServletRequest request, @RequestParam(value="city") List<String> requestedCities) throws IOException {
-        log.info(String.format("User %s requested GeoJSON for cities: %s",  request.getRemoteUser(), String.join(", ", requestedCities)));
+    public GeometryCollection geoController(HttpServletRequest request, @RequestParam(value = "city") List<String> requestedCities) throws IOException {
+        log.info(String.format("User %s requested GeoJSON for cities: %s", request.getRemoteUser(), String.join(", ", requestedCities)));
         return cityBoundariesService.getCityBoundariesGeoJSON(requestedCities);
     }
 }

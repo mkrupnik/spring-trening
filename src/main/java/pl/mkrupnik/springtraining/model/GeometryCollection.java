@@ -1,9 +1,10 @@
 package pl.mkrupnik.springtraining.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @JsonPropertyOrder({
         "type",
@@ -13,12 +14,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 public class GeometryCollection {
 
     @JsonProperty("type")
-    private String type="GeometryCollection";
+    private String type = "GeometryCollection";
     @JsonProperty("geometries")
     public List<MultiPolygon> geometries = new ArrayList<>();
 
     @JsonProperty("geometries")
-    public void add(List<MultiPolygon> multiPolygon){
+    public void add(List<MultiPolygon> multiPolygon) {
         geometries.addAll(multiPolygon);
     }
 

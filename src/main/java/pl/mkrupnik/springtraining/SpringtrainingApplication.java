@@ -12,7 +12,7 @@ public class SpringtrainingApplication {
 
 	public static void main(String[] args) throws Throwable{
 		SpringApplication.run(SpringtrainingApplication.class, args);
-		log.info("Zaczynamy! Wystartowało!");
+		log.info("Let's roll!");
 	}
 
 }

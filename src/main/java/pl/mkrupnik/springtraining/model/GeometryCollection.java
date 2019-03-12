@@ -31,14 +31,6 @@ public class GeometryCollection {
     public void addLongestLine() {
         LineString lineString = new LineString();
         List<List<Double>> coordinates = findMostDistantCoordinates();
-//        List<Double> coo1 = new ArrayList<>();
-//        List<Double> coo2 = new ArrayList<>();
-//        coo1.add(4.0);
-//        coo1.add(5.0);
-//        coo2.add(5.0);
-//        coo2.add(6.0);
-//        coordinates.add(coo1);
-//        coordinates.add(coo2);
         lineString.setCoordinates(coordinates);
         geometries.add(lineString);
     }

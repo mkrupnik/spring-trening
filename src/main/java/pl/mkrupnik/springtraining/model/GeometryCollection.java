@@ -42,9 +42,6 @@ public class GeometryCollection {
         lineString.setCoordinates(coordinates);
         geometries.add(lineString);
     }
-    public int maxDistance() {
-        return 100;
-    }
 
     private List<List<Double>> findMostDistantCoordinates() {
         double maxDist = Double.NEGATIVE_INFINITY;

@@ -43,11 +43,6 @@ public class CityBoundariesService {
         return geometryCollection;
     }
 
-    public int getMaxDistance(List<String> requestedCities) {
-        GeometryCollection geometryCollection = getCityBoundariesGeoJSON(requestedCities);
-        return geometryCollection.maxDistance();
-    }
-
     private GeometryCollection getCityBoundaries(String cityId) {
         URI uri = UriComponentsBuilder.fromUriString(geojsonApiQuery).queryParam("id", cityId).build().toUri();
         return template.getForObject(uri, GeometryCollection.class);

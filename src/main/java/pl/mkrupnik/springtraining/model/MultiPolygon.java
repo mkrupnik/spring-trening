@@ -16,7 +16,7 @@ public class MultiPolygon extends Feature {
     @JsonProperty("type")
     private String type="MultiPolygon";
     @JsonProperty("coordinates")
-    public List<List<List<List<Double>>>> coordinates = null;
+    private List<List<List<List<Double>>>> coordinates = null;
 
 
     public List<List<List<List<Double>>>> getCoordinates() {

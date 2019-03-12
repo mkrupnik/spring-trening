@@ -16,10 +16,10 @@ public class LineString extends Feature {
     @JsonProperty("type")
     private String type = "LineString";
     @JsonProperty("coordinates")
-    public List<List<Double>> coordinates = null;
+    private List<List<Double>> coordinates = null;
 
 
-    public void setCoordinates(List<List<Double>> coordinates) {
+    void setCoordinates(List<List<Double>> coordinates) {
         this.coordinates = coordinates;
     }
 

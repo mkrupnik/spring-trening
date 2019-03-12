@@ -16,4 +16,10 @@ public class Feature {
     private String type="Feature";
     @JsonProperty("coordinates")
     public List<List<List<List<Double>>>> coordinates = null;
+
+
+    public List<List<Double>> getClearCoordinates(){
+        return coordinates.get(0).get(0);
+    }
+
 }

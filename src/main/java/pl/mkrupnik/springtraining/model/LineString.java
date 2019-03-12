@@ -18,14 +18,13 @@ public class LineString extends Feature {
     @JsonProperty("coordinates")
     public List<List<Double>> coordinates = null;
 
-    @JsonProperty("coordinates")
-    public List<List<Double>> getCoordinates() {
-        return coordinates;
-    }
 
-    @JsonProperty("coordinates")
     public void setCoordinates(List<List<Double>> coordinates) {
         this.coordinates = coordinates;
+    }
+
+    public List<List<Double>> getClearCoordinates(){
+        return coordinates;
     }
 
 }

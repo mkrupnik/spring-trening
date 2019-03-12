@@ -33,6 +33,7 @@ public class CityBoundariesService {
             try {
                 cityId = cityIDService.getIdFromApi(cityName);
                 GeometryCollection toAdd = getCityBoundaries(cityId);
+                toAdd.addLongestLine();
                 geometryCollection.add(toAdd.getFeature());
             } catch (NoSuchCityException e) {
                 log.info(e.getMessage());

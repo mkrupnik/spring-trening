@@ -53,7 +53,7 @@ public class GeometryCollection {
         result.add(new ArrayList<Double>());
         List<List<Double>> coordinatesToAnalyze = new ArrayList<>();
         for(Feature feature : geometries) {
-            coordinatesToAnalyze.addAll(feature.coordinates.get(0).get(0));
+            coordinatesToAnalyze.addAll(feature.getClearCoordinates());
         }
         int l = coordinatesToAnalyze.size();
         for(int i=0; i<l;i++) {

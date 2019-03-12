@@ -11,16 +11,9 @@ import java.util.List;
         "type",
         "coordinates"
 })
-public class MultiPolygon extends Feature {
-
+public class Feature {
     @JsonProperty("type")
-    private String type="MultiPolygon";
+    private String type="Feature";
     @JsonProperty("coordinates")
     public List<List<List<List<Double>>>> coordinates = null;
-
-    @JsonProperty("coordinates")
-    public List<List<List<List<Double>>>> getCoordinates() {
-        return coordinates;
-    }
-
 }

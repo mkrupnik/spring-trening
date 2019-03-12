@@ -15,9 +15,9 @@ public class CityIDService {
     @Value("${idsearch}")
     private String apiQueryUrl;
 
-    String getIdFromApi(String cityName) {
+    String getIdFromApi(String cityName) throws NoSuchCityException {
         IDMetaData[] metadataResults = getSearchResult(cityName);
-        if (metadataResults.length == 0) throw new IllegalArgumentException();
+        if (metadataResults.length == 0) throw new NoSuchCityException(String.format("There is no data for %s", cityName));
         return osmIdFromSearchResults(metadataResults);
     }
 

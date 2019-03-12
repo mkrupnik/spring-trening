@@ -20,7 +20,7 @@ public class GeoController {
     private CityBoundariesService cityBoundariesService;
 
     @RequestMapping("/search")
-    public GeometryCollection geoController(HttpServletRequest request, @RequestParam(value = "city") List<String> requestedCities) throws IOException {
+    public GeometryCollection searchController(HttpServletRequest request, @RequestParam(value = "city") List<String> requestedCities) throws IOException {
         log.info(String.format("User %s requested GeoJSON for cities: %s", request.getRemoteUser(), String.join(", ", requestedCities)));
         return cityBoundariesService.getCityBoundariesGeoJSON(requestedCities);
     }

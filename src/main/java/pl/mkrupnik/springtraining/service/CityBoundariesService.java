@@ -1,5 +1,6 @@
 package pl.mkrupnik.springtraining.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
@@ -14,6 +15,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Service
+@Slf4j
 public class CityBoundariesService {
 
     @Autowired
@@ -26,12 +28,23 @@ public class CityBoundariesService {
 
     public GeometryCollection getCityBoundariesGeoJSON(List<String> requestedCities) {
         GeometryCollection geometryCollection = new GeometryCollection();
+        String cityId;
         for (String cityName : requestedCities) {
-            String cityId = cityIDService.getIdFromApi(cityName);
-            GeometryCollection toAdd = getCityBoundaries(cityId);
-            geometryCollection.add(toAdd.getMultiPolygon());
+            try {
+                cityId = cityIDService.getIdFromApi(cityName);
+                GeometryCollection toAdd = getCityBoundaries(cityId);
+                geometryCollection.add(toAdd.getFeature());
+            } catch (NoSuchCityException e) {
+                log.info(e.getMessage());
+            }
         }
+        geometryCollection.addLongestLine();
         return geometryCollection;
+    }
+
+    public int getMaxDistance(List<String> requestedCities) {
+        GeometryCollection geometryCollection = getCityBoundariesGeoJSON(requestedCities);
+        return geometryCollection.maxDistance();
     }
 
     private GeometryCollection getCityBoundaries(String cityId) {

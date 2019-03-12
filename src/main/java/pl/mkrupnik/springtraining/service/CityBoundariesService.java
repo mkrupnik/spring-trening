@@ -8,6 +8,7 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
+import pl.mkrupnik.springtraining.exception.NoSuchCityException;
 import pl.mkrupnik.springtraining.model.GeometryCollection;
 
 import java.net.URI;
@@ -24,14 +25,15 @@ public class CityBoundariesService {
     @Value("${geojsonSearch}")
     private String geojsonApiQuery;
 
-    private RestTemplate template = createAndSetupRestTempate();
+    @Autowired
+    private RestTemplate restTemplate;
 
     public GeometryCollection getCityBoundariesGeoJSON(List<String> requestedCities) {
         GeometryCollection geometryCollection = new GeometryCollection();
         String cityId;
         for (String cityName : requestedCities) {
             try {
-                cityId = cityIDService.getIdFromApi(cityName);
+                cityId = cityIDService.getId(cityName);
                 GeometryCollection toAdd = getCityBoundaries(cityId);
                 toAdd.addLongestLine();
                 geometryCollection.add(toAdd.getFeature());
@@ -45,15 +47,6 @@ public class CityBoundariesService {
 
     private GeometryCollection getCityBoundaries(String cityId) {
         URI uri = UriComponentsBuilder.fromUriString(geojsonApiQuery).queryParam("id", cityId).build().toUri();
-        return template.getForObject(uri, GeometryCollection.class);
-    }
-
-    private RestTemplate createAndSetupRestTempate() {
-        RestTemplate template = new RestTemplate();
-        MappingJackson2HttpMessageConverter mapper =
-                new MappingJackson2HttpMessageConverter();
-        mapper.setSupportedMediaTypes(Arrays.asList(MediaType.TEXT_PLAIN, MediaType.TEXT_HTML));
-        template.getMessageConverters().add(mapper);
-        return template;
+        return restTemplate.getForObject(uri, GeometryCollection.class);
     }
 }

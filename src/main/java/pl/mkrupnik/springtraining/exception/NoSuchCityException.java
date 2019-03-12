@@ -1,4 +1,4 @@
-package pl.mkrupnik.springtraining.service;
+package pl.mkrupnik.springtraining.exception;
 
 public class NoSuchCityException extends Exception {
     public NoSuchCityException() {

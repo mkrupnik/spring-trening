@@ -3,8 +3,6 @@ package pl.mkrupnik.springtraining.service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.MediaType;
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -12,7 +10,6 @@ import pl.mkrupnik.springtraining.exception.NoSuchCityException;
 import pl.mkrupnik.springtraining.model.GeometryCollection;
 
 import java.net.URI;
-import java.util.Arrays;
 import java.util.List;
 
 @Service

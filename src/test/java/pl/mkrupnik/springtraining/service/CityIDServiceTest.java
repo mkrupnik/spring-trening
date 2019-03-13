@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.web.client.RestTemplate;
+import pl.mkrupnik.springtraining.SpringtrainingApplication;
 import pl.mkrupnik.springtraining.exception.NoSuchCityException;
 import pl.mkrupnik.springtraining.model.IDMetaData;
 
@@ -19,8 +20,9 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 
-
+@ContextConfiguration(classes = {SpringtrainingApplication.class})
 @RunWith(MockitoJUnitRunner.class)
+@TestPropertySource("classpath:application-test.properties")
 public class CityIDServiceTest {
 
     @Mock
@@ -34,10 +36,8 @@ public class CityIDServiceTest {
         // given
         ReflectionTestUtils.setField(cityIdService, "apiQueryUrl", "localhost");
         when(restTemplate.getForObject(any(URI.class), eq(IDMetaData[].class))).thenReturn(prepareCityMetada());
-
         // when
         String krakowID = cityIdService.getId("krakow");
-
         // then
         assertEquals("666", krakowID);
     }

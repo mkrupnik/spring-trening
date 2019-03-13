@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @JsonPropertyOrder({
         "type",
@@ -65,5 +66,19 @@ public class GeometryCollection {
         double y2 = coo2.get(1);
 
         return(Math.pow(x1-x2,2) + Math.pow(y1-y2,2));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GeometryCollection that = (GeometryCollection) o;
+        return Objects.equals(type, that.type) &&
+                Objects.equals(geometries, that.geometries);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(type, geometries);
     }
 }

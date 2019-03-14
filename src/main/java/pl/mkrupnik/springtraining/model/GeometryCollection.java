@@ -12,7 +12,6 @@ import java.util.List;
         "type",
         "geometries"
 })
-
 public class GeometryCollection {
 
     @JsonProperty("type")

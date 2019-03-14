@@ -7,9 +7,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 import pl.mkrupnik.springtraining.exception.NoSuchCityException;
+import pl.mkrupnik.springtraining.model.CommonResponse;
+import pl.mkrupnik.springtraining.model.Coordinates;
 import pl.mkrupnik.springtraining.model.GeometryCollection;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -24,6 +27,9 @@ public class CityBoundariesService {
 
     @Autowired
     private GetMaxDistanceService getMaxDistanceService;
+
+    @Autowired
+    private CommonBorderService commonBorderService;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -78,5 +84,34 @@ public class CityBoundariesService {
             }
         }
         return getMaxDistanceService.distance(geometryCollection);
+    }
+
+    public boolean getBooleanIfCommon(List<String> requestedCities) {
+        if(requestedCities.size()!=2) throw new IllegalArgumentException("Should be run with 2 cities");
+        try {
+            String cityId1 = cityIDService.getId(requestedCities.get(0));
+            String cityId2 = cityIDService.getId(requestedCities.get(1));
+            GeometryCollection geometryCollection1 = getCityBoundaries(cityId1);
+            GeometryCollection geometryCollection2 = getCityBoundaries(cityId2);
+            return commonBorderService.hasCommonBorder(geometryCollection1,geometryCollection2);
+        } catch (NoSuchCityException e) {
+            log.info(e.getMessage());
+        }
+        return false;
+    }
+
+    public CommonResponse getCommonCoordinates(List<String> requestedCities) {
+        if(requestedCities.size()!=2) throw new IllegalArgumentException("Should be run with 2 cities");
+        try {
+            String cityId1 = cityIDService.getId(requestedCities.get(0));
+            String cityId2 = cityIDService.getId(requestedCities.get(1));
+            GeometryCollection geometryCollection1 = getCityBoundaries(cityId1);
+            GeometryCollection geometryCollection2 = getCityBoundaries(cityId2);
+            return commonBorderService.commonBorder(geometryCollection1,geometryCollection2);
+        } catch (NoSuchCityException e) {
+            log.info(e.getMessage());
+        }
+
+        return new CommonResponse(false, 0.0, null, null);
     }
 }

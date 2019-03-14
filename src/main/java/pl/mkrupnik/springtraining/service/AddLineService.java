@@ -26,4 +26,14 @@ public class AddLineService {
         lineString.setCoordinates(listCoordinates);
         geometryCollection.getGeometries().add(lineString);
     }
+
+    public GeometryCollection createLineFromCoordinates(List<Coordinates> listOfCoordinates) {
+        LineString lineString = new LineString();
+        List<List<Double>> listCoordinates = listOfCoordinates.stream().
+                map(Coordinates::asList).collect(Collectors.toList());
+        lineString.setCoordinates(listCoordinates);
+        GeometryCollection geometryCollection = new GeometryCollection();
+        geometryCollection.getGeometries().add(lineString);
+        return geometryCollection;
+    }
 }

@@ -1238,7 +1238,7 @@ com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'None': was ex
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
 	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:329)
 	at pl.mkrupnik.springtraining.service.CityBoundariesService.getCityBoundaries(CityBoundariesService.java:42)
-	at pl.mkrupnik.springtraining.service.CityBoundariesService.getCityBoundariesGeoJSON(CityBoundariesService.java:34)
+	at getGeometryCollection(CityBoundariesService.java:34)
 	at searchController(GeoController.java:25)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)

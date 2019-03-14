@@ -22,6 +22,18 @@ public class GeoController {
     @RequestMapping("/search")
     public GeometryCollection searchController(HttpServletRequest request, @RequestParam(value = "city") List<String> requestedCities) throws IOException {
         log.info(String.format("User %s requested GeoJSON for cities: %s", request.getRemoteUser(), String.join(", ", requestedCities)));
-        return cityBoundariesService.getCityBoundariesGeoJSON(requestedCities);
+        return cityBoundariesService.getGeometryCollection(requestedCities);
+    }
+
+    @RequestMapping("/searchdist")
+    public GeometryCollection searchWithDistanceController(HttpServletRequest request, @RequestParam(value = "city") List<String> requestedCities) throws IOException {
+        log.info(String.format("User %s requested GeoJSON with distance for cities: %s", request.getRemoteUser(), String.join(", ", requestedCities)));
+        return cityBoundariesService.getGeometryCollectionWithDistance(requestedCities);
+    }
+
+    @RequestMapping("/distance")
+    public double findDistanceController(HttpServletRequest request, @RequestParam(value = "city") List<String> requestedCities) throws IOException {
+        log.info(String.format("User %s requested GeoJSON with distance for cities: %s", request.getRemoteUser(), String.join(", ", requestedCities)));
+        return cityBoundariesService.getMaxDistance(requestedCities);
     }
 }

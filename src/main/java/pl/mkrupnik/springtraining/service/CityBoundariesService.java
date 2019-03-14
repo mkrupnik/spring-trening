@@ -19,31 +19,64 @@ public class CityBoundariesService {
     @Autowired
     private CityIDService cityIDService;
 
-    @Value("${geojsonSearch}")
-    private String geojsonApiQuery;
+    @Autowired
+    private AddLineService addLineService;
+
+    @Autowired
+    private GetMaxDistanceService getMaxDistanceService;
 
     @Autowired
     private RestTemplate restTemplate;
 
-    public GeometryCollection getCityBoundariesGeoJSON(List<String> requestedCities) {
+    @Value("${geojson.search}")
+    private String geojsonApiQuery;
+
+    public GeometryCollection getGeometryCollection(List<String> requestedCities) {
         GeometryCollection geometryCollection = new GeometryCollection();
-        String cityId;
         for (String cityName : requestedCities) {
             try {
-                cityId = cityIDService.getId(cityName);
+                String cityId = cityIDService.getId(cityName);
                 GeometryCollection toAdd = getCityBoundaries(cityId);
-                toAdd.addLongestLine();
                 geometryCollection.add(toAdd.getFeature());
             } catch (NoSuchCityException e) {
                 log.info(e.getMessage());
             }
         }
-        geometryCollection.addLongestLine();
+        return geometryCollection;
+    }
+
+    public GeometryCollection getGeometryCollectionWithDistance(List<String> requestedCities) {
+        GeometryCollection geometryCollection = new GeometryCollection();
+        for (String cityName : requestedCities) {
+            try {
+                String cityId = cityIDService.getId(cityName);
+                GeometryCollection toAdd = getCityBoundaries(cityId);
+                addLineService.addLongestLine(toAdd);
+                geometryCollection.add(toAdd.getFeature());
+            } catch (NoSuchCityException e) {
+                log.info(e.getMessage());
+            }
+        }
+        addLineService.addLongestLine(geometryCollection);
         return geometryCollection;
     }
 
     private GeometryCollection getCityBoundaries(String cityId) {
         URI uri = UriComponentsBuilder.fromUriString(geojsonApiQuery).queryParam("id", cityId).build().toUri();
         return restTemplate.getForObject(uri, GeometryCollection.class);
+    }
+
+    public double getMaxDistance(List<String> requestedCities) {
+        GeometryCollection geometryCollection = new GeometryCollection();
+        for (String cityName : requestedCities) {
+            try {
+                String cityId = cityIDService.getId(cityName);
+                GeometryCollection toAdd = getCityBoundaries(cityId);
+                geometryCollection.add(toAdd.getFeature());
+            } catch (NoSuchCityException e) {
+                log.info(e.getMessage());
+            }
+        }
+        return getMaxDistanceService.distance(geometryCollection);
     }
 }

@@ -13,7 +13,7 @@ import java.net.URI;
 @Service
 class CityIDService {
 
-    @Value("${idsearch}")
+    @Value("${id.search}")
     private String apiQueryUrl;
 
     @Autowired

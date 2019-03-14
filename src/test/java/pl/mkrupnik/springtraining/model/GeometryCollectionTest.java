@@ -1,5 +1,6 @@
 package pl.mkrupnik.springtraining.model;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import static org.testng.Assert.*;
 
 public class GeometryCollectionTest {
 
+//    @Ignore
 //    @Test
 //    public void shouldReturnCorrectListOfCoordinates() {
 //        //given
@@ -33,7 +35,7 @@ public class GeometryCollectionTest {
 //        List<Feature> geometries =  gc.geometries;
 //        Feature lineString = gc.geometries.get(1);
 //        assertTrue(lineString.getClass().equals(LineString.class));
-//        List<List<Double>> resultCoordinates = lineString.getClearCoordinates();
+//        List<Coordinates> resultCoordinates = lineString.getListOfCoordinates();
 //        assertTrue(resultCoordinates.contains(coo1));
 //        assertTrue(resultCoordinates.contains(coo3));
 //

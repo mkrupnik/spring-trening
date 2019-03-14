@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.AbstractList;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,7 +19,7 @@ public class Coordinates{
         this.x = list.get(0);
         this.y = list.get(1);
     }
-    List<Double> asList() {
+    public List<Double> asList() {
         return Arrays.asList(x,y);
     }
 }

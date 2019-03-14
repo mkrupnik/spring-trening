@@ -22,11 +22,6 @@ public class MultiPolygon extends Feature {
     @JsonProperty("coordinates")
     private List<List<List<List<Double>>>> coordinates = null;
 
-    public List<List<List<List<Double>>>> getCoordinates() {
-        return coordinates;
-    }
-
-
     @JsonIgnore
     public List<Coordinates> getListOfCoordinates(){
         List<Coordinates> result = new ArrayList<>();
@@ -35,5 +30,4 @@ public class MultiPolygon extends Feature {
         };
         return result;
     }
-
 }

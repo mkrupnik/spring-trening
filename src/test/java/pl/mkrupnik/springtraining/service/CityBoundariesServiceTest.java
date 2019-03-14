@@ -5,11 +5,9 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.web.client.RestTemplate;
 import pl.mkrupnik.springtraining.exception.NoSuchCityException;
 import pl.mkrupnik.springtraining.model.GeometryCollection;
-import pl.mkrupnik.springtraining.model.IDMetaData;
 
 import java.net.URI;
 import java.util.ArrayList;
@@ -37,7 +35,7 @@ public class CityBoundariesServiceTest {
 
         when(restTemplate.getForObject(any(URI.class), eq(GeometryCollection.class))).thenReturn(prepareCityMetada());
 
-         GeometryCollection geometryCollection = cityBoundariesService.getCityBoundariesGeoJSON(new ArrayList<String>());
+         GeometryCollection geometryCollection = cityBoundariesService.getGeometryCollection(new ArrayList<String>());
 
         assertNotNull(geometryCollection);
     }

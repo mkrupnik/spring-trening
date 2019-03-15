@@ -9,14 +9,9 @@ import org.springframework.web.client.RestTemplate;
 import pl.mkrupnik.springtraining.exception.NoSuchCityException;
 import pl.mkrupnik.springtraining.model.GeometryCollection;
 
-import java.net.URI;
 import java.util.ArrayList;
 
-import static junit.framework.TestCase.assertEquals;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.when;
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertNotNull;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CityBoundariesServiceTest {
@@ -33,9 +28,9 @@ public class CityBoundariesServiceTest {
     @Test
     public void shouldReturnIDString() throws NoSuchCityException {
 
-        when(restTemplate.getForObject(any(URI.class), eq(GeometryCollection.class))).thenReturn(prepareCityMetada());
+        //when(restTemplate.getForObject(any(URI.class), eq(GeometryCollection.class))).thenReturn(prepareCityMetada());
 
-         GeometryCollection geometryCollection = cityBoundariesService.getGeometryCollection(new ArrayList<String>());
+        GeometryCollection geometryCollection = cityBoundariesService.getGeometryCollection(new ArrayList<String>());
 
         assertNotNull(geometryCollection);
     }

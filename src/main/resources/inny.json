@@ -1,0 +1,25 @@
+{
+  "type": "GeometryCollection",
+
+  "geometries": [
+    {
+      "properties": {
+        "stroke": "#e880ea",
+        "stroke-width": 2,
+        "stroke-opacity": 1
+      },
+      "type": "LineString",
+
+      "coordinates": [
+        [
+          21.1239083,
+          52.2763243
+        ],
+        [
+          21.0842383,
+          52.3015562
+        ]
+      ]
+    }
+  ]
+}
